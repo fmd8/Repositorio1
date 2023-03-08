@@ -11,10 +11,12 @@
         <div class="row">
             <div class="col"> 
                <?php
+              
                define('HOST', 'localhost');
                define('USER', 'root');
                define('PASS', '');
                define('BD' , 'casa_muebles');
+              
 
                $conexion = mysqli_connect(HOST, USER, PASS, BD);
 
@@ -22,11 +24,15 @@
                 die ("error de conexion con la base de datos!");
                }
 
-               $consulta = 'SELECT * FROM clientes';
+               
+
+               $consulta = 'SELECT * FROM productos';
                $resultado = mysqli_query($conexion, $consulta);
                $filas = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
                
-               print_r($filas);
+               echo "<pre>";
+               var_dump($filas);
+               echo "</pre>";
 
 
                ?>
