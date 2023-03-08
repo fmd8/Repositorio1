@@ -16,13 +16,13 @@
                         <a class="nav-link active" aria-current="page" href="productos.php">Todos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php">sillon capri</a>
+                        <a class="nav-link" href="productos.php?id_Producto=1">sillon capri</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php">Mesa ipanema</a>
+                        <a class="nav-link" href="productos.php?id_Producto=2">Mesa ipanema</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php">Banco venecia</a>
+                        <a class="nav-link" href="productos.php?id_Producto=3">Banco venecia</a>
                     </li>
 
                     </ul>
@@ -42,10 +42,11 @@
 
 
                foreach ($filas as $fila) {
-                    echo '<div class="row">';
+                    echo '<div class="row my-3 border border-dark rounded">';
                     echo '<div class="col-md-8">';
                     echo '<h3>' .$fila["nombre_producto"] .'</3>';
                     echo '<p>' .$fila["caracteristicas"] .'</p>';
+                    echo '<h4 class="text-danger">$' .$fila["precio"] .'</h4>';
                     echo '</div>';
                     echo '<div class="col-md-4">';
                     echo '<img src= " '.$fila["imagen"] .'" class="img-fluid" />';
