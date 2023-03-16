@@ -16,13 +16,13 @@
                         <a class="nav-link active" aria-current="page" href="productos.php">Todos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php?id_Producto=1">sillon capri</a>
+                        <a class="nav-link" href="silloncapri.php?silloncapri">sillon capri</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php?id_Producto=2">Mesa ipanema</a>
+                        <a class="nav-link" href="productos.php?idProducto=2">Mesa ipanema</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php?id_Producto=3">Banco venecia</a>
+                        <a class="nav-link" href="productos.php?idProducto=3">Banco venecia</a>
                     </li>
 
                     </ul>
@@ -35,6 +35,13 @@
                if (!$conexion) {
                 die ("error de conexion con la base de datos!");
                }
+
+               if (isset ($_REQUEST ["idProducto"])) {
+                $id_producto = $_REQUEST["idProducto"];
+                $consulta = 'SELECT idProducto FROM productos WHERE (nombre_producto = 2 )' ;
+               }
+
+
 
                $consulta = 'SELECT * FROM productos';
                $resultado = mysqli_query($conexion, $consulta);
