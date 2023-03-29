@@ -19,10 +19,10 @@
                         <a class="nav-link" href="silloncapri.php?silloncapri">sillon capri</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php?idProducto=2">Mesa ipanema</a>
+                        <a class="nav-link" href="ipanema.php?ipanema">Mesa ipanema</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="productos.php?idProducto=3">Banco venecia</a>
+                        <a class="nav-link" href="venecia.php?venecia">Banco venecia</a>
                     </li>
 
                     </ul>
